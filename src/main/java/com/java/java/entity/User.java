@@ -2,9 +2,11 @@ package com.java.java.entity;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
+
 @Entity
 @Table(name = "users")
-public class User {
+public class User implements Serializable {
 
         @Id
         @GeneratedValue(strategy = GenerationType.AUTO)
@@ -54,5 +56,7 @@ public class User {
         public void setEmail(String email) {
             this.email = email;
         }
+
+
 
 }
